@@ -11,15 +11,18 @@ from itemloaders.processors import MapCompose
 
 def clean_artist(artists):
     if artists:
-        return [artist.split(":")[1] for artist in artists.split(";")]
+        for artist in artists.split(";"):
+            if ":" in artist:
+                artist = artist.split(":")[1]
+            yield artist.strip()
 
 
 def join_href(href, loader_context):
-    return loader_context['response'].urljoin(href)
+    return loader_context["response"].urljoin(href)
 
 
 def split_categories(hrefs):
-    return [href for href in hrefs.split("/") if href != 'browse' and href]
+    return [href for href in hrefs.split("/") if href != "browse" and href]
 
 
 class ArtworksItem(scrapy.Item):
