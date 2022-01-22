@@ -7,3 +7,5 @@
 | Deploy and first test run  | 0.5 |
 | Refactor  | 0.5 |
 | Deploy and second test run  | 0.5 |
+| Artist name bugfix  | 0.5 |
+| Last review, deploy and run  | 0.5 |
