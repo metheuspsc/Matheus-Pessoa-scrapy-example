@@ -15,8 +15,7 @@ Requirements were clear about the pages to fetch, and the information to gather.
 >* First off I specified both requested categories as start_urls. That´s one thing I let slide on my previous try, on that occasion I scraped all categories.
 >
 >
-> * The spider first looks for artworks on each page, since even
-    > ¨larger¨ category pages have artworks.
+> * The spider first looks for artworks on each page, since even ¨larger¨ category pages have artworks.
 >
 >
 > * Then it looks for pagination, another step I let slide the last time.
@@ -27,4 +26,11 @@ Requirements were clear about the pages to fetch, and the information to gather.
 > ### Code
 > * I separated the locators from the actual code in a SimpleNamespace, so they would be easier to change without 
 > going through all the file.
+> 
+> 
+> * The clean_artist method under items.py is not a generator expression for better readability.
+> 
+> 
+> * Used pre-commit for linting and formatting.
+> 
 > 
